@@ -46,10 +46,11 @@ class Translator
     morse_arr = eng_arr.map { |char| @dictionary[char] }
     morse = morse_arr.join
   end
-  #
-  # def morse_to_english(morse)
-  #   morse_arr = morse.split("")
-  #   eng_arr = morse_arr.map { |char| @dictionary[char] }
-  # end
+
+  def morse_to_english(morse)
+    morse_arr = morse.split("")
+    eng_arr = morse_arr.map { |value| @dictionary.key(value) }
+    english = eng_arr.join
+  end
 
 end
