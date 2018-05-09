@@ -48,8 +48,11 @@ class Translator
     morse = morse_arr.join
   end
 
-  def from_file(english)
-
+  def from_file(new_file)
+    file = File.open(new_file, "r")
+    text = file.read
+    file.close
+    eng_to_morse(text)
   end
 
   def morse_to_eng(morse)

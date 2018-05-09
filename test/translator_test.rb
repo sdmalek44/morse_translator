@@ -30,10 +30,9 @@ class TranslatorTest < Minitest::Test
   end
 
   def test_from_file
-    skip
     trans = Translator.new
     expected = ".. .--- ..-. .- ..-....-..."
-    actual = trans.from_file("input.txt")
+    actual = trans.from_file("./lib/input.txt")
 
     assert_equal expected, actual
   end
