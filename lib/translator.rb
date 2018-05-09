@@ -1,3 +1,4 @@
+
 class Translator
 
   def initialize
@@ -47,10 +48,17 @@ class Translator
     morse = morse_arr.join
   end
 
-  def morse_to_english(morse)
-    morse_arr = morse.split("")
+  def from_file(english)
+
+  end
+
+  def morse_to_eng(morse)
+    morse_arr = morse.split(" ")
     eng_arr = morse_arr.map { |value| @dictionary.key(value) }
     english = eng_arr.join
+    english
   end
+
+
 
 end
