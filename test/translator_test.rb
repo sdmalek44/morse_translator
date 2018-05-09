@@ -23,7 +23,7 @@ class TranslatorTest < Minitest::Test
 
   def test_morse_to_eng
     trans = Translator.new
-    expected = "helloworld"
+    expected = "hello world"
     actual = trans.morse_to_eng(".... . .-.. .-.. ---  .-- --- .-. .-.. -..")
 
     assert_equal expected, actual
@@ -36,7 +36,4 @@ class TranslatorTest < Minitest::Test
 
     assert_equal expected, actual
   end
-
-
 end
-# YOUR TESTS GO IN HERE!

@@ -56,12 +56,12 @@ class Translator
   end
 
   def morse_to_eng(morse)
-    morse_arr = morse.split(" ")
-    eng_arr = morse_arr.map { |value| @dictionary.key(value) }
-    english = eng_arr.join
-    english
+    morse_arr = morse.split("  ")
+    word_arr = morse_arr.map { |word| word.split(" ")}
+    word_arr.map! do |word|
+      word.map! { |letter| @dictionary.key(letter) }
+    end
+    word_arr.map! { |word| word.join + " " }
+    word_arr.join.chop
   end
-
-
-
 end
