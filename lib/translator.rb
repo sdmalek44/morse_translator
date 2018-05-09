@@ -39,4 +39,17 @@ class Translator
                     "0" => "-----",
                     " " => " "}
   end
+
+  def eng_to_morse(english)
+    english = english.downcase
+    eng_arr = english.split("")
+    morse_arr = eng_arr.map { |char| @dictionary[char] }
+    morse = morse_arr.join
+  end
+  #
+  # def morse_to_english(morse)
+  #   morse_arr = morse.split("")
+  #   eng_arr = morse_arr.map { |char| @dictionary[char] }
+  # end
+
 end
